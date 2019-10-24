@@ -124,7 +124,7 @@ echo "carpeta logs creada"
 cd /home/engine/ManageEngine/AppManager14/
 var10=$(pwd)
 sudo nohup sh startApplicationsManager.sh &
-tail -F nohup.out
+sudo tail -F nohup.out
 echo "estas en ====> $var10"
 #cd /home/engine/
 #var11=$(pwd)
