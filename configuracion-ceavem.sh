@@ -38,7 +38,7 @@ if [ -f /home/engine/ManageEngine/AppManager14/startApplicationsManager.sh ]; th
 	#jobs
 
 
-	if  grep "Please connect your client to the web server on port: 9090" nohup.out ; then
+	if  sudo grep "Please connect your client to the web server on port: 9090" nohup.out ; then
 		echo "instalado..."
 		cd /home/engine/ManageEngine/AppManager14/
 		var2=$(pwd)
@@ -73,7 +73,7 @@ if [ -f /home/engine/ManageEngine/AppManager14/startApplicationsManager.sh ]; th
 		#cd /home/engine/ManageEngine/AppManager14/bin/
 		sudo telnet 127.0.0.1 15434 | tee telnetbase.txt
 		sleep 5s
-		if  grep "Connected to 127.0.0.1." telnetbase.txt; then  
+		if  sudo grep "Connected to 127.0.0.1." telnetbase.txt; then  
 			echo "#######################################" 
 			echo "Conectado 15434/tcp base de datos"
 			backupconfigzip
