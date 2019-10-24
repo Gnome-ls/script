@@ -51,7 +51,7 @@ if [ -f /home/engine/ManageEngine/AppManager14/startApplicationsManager.sh ]; th
 		sudo cp $va /home/engine/ManageEngine/AppManager14/working/backup
 		sudo cp wlclient.jar /home/engine/ManageEngine/AppManager14/working/classes/weblogic/version12
 		sudo cp wljmxclient.jar /home/engine/ManageEngine/AppManager14/working/classes/weblogic/version12
-		sudo cd /home/engine/
+		cd /home/engine/
 		cd /home/engine/ManageEngine/AppManager14/working/backup/
 		var4=$(pwd)
 		echo "estas en ====> $var4" #/home/engine/ManageEngine/AppManager14/working/backup/
