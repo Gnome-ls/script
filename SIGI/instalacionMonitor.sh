@@ -125,11 +125,13 @@ cd /home/jccv/ManageEngine/AppManager14/
 var10=$(pwd)
 nohup sh startApplicationsManager.sh &
 tail -F nohup.out
-echo "estas en ====> $var10"
-#cd /home/jccv/
-#var11=$(pwd)
-#echo "estas en ====> $var11"
-echo -e "c\n"
+sleep 20m
+#echo "estas en ====> $var10"
+
+#modificaciones
+PID=$!
+sleep 2s
+kill $PID
 
 cd /home/jccv/Escritorio/script-clon/script/SIGI
 ./configuracion-monitor.sh
