@@ -132,6 +132,6 @@ if [ -f /home/jccv/ManageEngine/AppManager14/startApplicationsManager.sh ]; then
 else 	
 	cd /home/jccv/
 	rm -rf  ManageEngine
-	cd /home/jccv/Descargas
-	./instalacion-monitor-sigi.sh
+	cd /home/jccv/Escritorio/script-clon/script/SIGI/
+	./instalacionMonitor.sh
 fi

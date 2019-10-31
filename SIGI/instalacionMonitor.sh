@@ -40,7 +40,7 @@ cd /home/jccv/ManageEngine
 direc=$(pwd)
 echo "estas en ====> $direc"
 #Salimos hasta la reiz
-cd /home/jccv/
+cd /home/jccv/Escritorio/script-clon/script/SIGI
 # Ruta de donde se encuentre el script y donde se descargará e$
 cd /home/jccv/Descargas
 ruta=$(pwd)
@@ -123,15 +123,17 @@ mkdir logs
 echo "carpeta logs creada"
 cd /home/jccv/ManageEngine/AppManager14/
 var10=$(pwd)
-nohup sh startApplicationsManager.sh &
-tail -F nohup.out
-sleep 20m
-#echo "estas en ====> $var10"
-
-#modificaciones
-PID=$!
-sleep 2s
-kill $PID
-
+nohup sh startApplicationsManager.sh > nohup.out &
+sleep 15m
+file=/home/jccv/ManageEngine/AppManager14/nohup.out
+while read line ; do
+	#echo -e "$line\n"
+	result=$(grep "9090" nohup.out)
+	echo "DEBUG: Resultado encontrado $result"
+	if [ -z "$result" ]; then 
+		echo "Completo..."
+	break
+	fi
+done < "$file"
 cd /home/jccv/Escritorio/script-clon/script/SIGI
 ./configuracion-monitor.sh
