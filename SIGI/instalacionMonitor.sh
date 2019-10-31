@@ -136,4 +136,4 @@ while read line ; do
 	fi
 done < "$file"
 cd /home/jccv/Escritorio/script-clon/script/SIGI
-./configuracion-monitor.sh
+./configuracion-monitor.sh 
