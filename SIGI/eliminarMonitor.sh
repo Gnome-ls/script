@@ -1,7 +1,7 @@
 #!/bin/bash
 
 cd /home/jccv/ManageEngine/AppManager14
-./shutdownApplicationsManager.sh -force | tee forzarCierre.txt
+./shutdownApplicationsManager.sh -force | tee forzarCierre.txt 
 
 if grep "All the related process are terminated" forzarCierre.txt; then
 
